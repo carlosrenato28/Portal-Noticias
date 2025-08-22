@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal de Notícias</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>📰 Portal de Notícias</h1>
+    <button id="loginBtn">Login Admin</button>
+    <button id="logoutBtn" style="display:none;">Sair</button>
+  </header>
+
+  <main>
+    <!-- Área de administração (apenas para admin logado) -->
+    <section id="adminPanel" style="display:none;">
+  <h2>Painel do Administrador</h2>
+  <form id="newsForm">
+    <input type="hidden" id="editIndex" value="">
+    <input type="text" id="title" placeholder="Título da notícia" required>
+    <textarea id="content" placeholder="Conteúdo da notícia" required></textarea>
+    <button type="submit">Salvar Notícia</button>
+  </form>
+</section>
+
+
+    <!-- Lista de notícias visível a todos -->
+    <section>
+      <h2>Últimas Notícias</h2>
+      <div id="newsList"></div>
+    </section>
+  </main>
+
+  <!-- Modal de Login -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <h2>Area Administrador</h2>
+      <input type="text" id="username" placeholder="Usuário">
+      <input type="password" id="password" placeholder="Senha">
+      <button id="loginSubmit">Entrar</button>
+      <button id="closeModal">Fechar</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
