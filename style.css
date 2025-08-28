@@ -62,7 +62,7 @@ button:hover {
   cursor: pointer;
 }
 
-/* Modal de login */
+
 .modal {
   display: none;
   position: fixed;
@@ -81,3 +81,4 @@ button:hover {
   border-radius: 8px;
   text-align: center;
 }
+
